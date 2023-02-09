@@ -1,0 +1,55 @@
+.clases-section{
+    height: auto;
+    width: 100%;
+    background-color: $bgColor1;
+
+    @include flex(row,center,center);
+
+
+    .clases-container{
+        width: 100%;
+        @include flex(column,center,center);
+
+        .clases-title-container{
+
+            text-align: center;
+            .clases-title{
+                padding-left:50px ;
+                padding-right: 50px;
+                font-size: 40px;
+                color: #fff;
+                margin-top: 100px;
+            }
+        }
+
+
+        .clases-info{
+            max-width: 1100px;
+            margin-top: 50px;
+            
+
+            .clase{
+                margin-top: 100px;
+                @include flex(row,center,center);
+                .clase-texto{
+
+                    color: #eee;
+                    text-align: center;
+                    padding: 30px;
+                }
+                
+                .clases-img{
+                    height: 300px;
+                    border-radius: 10px;
+                    
+                }
+                
+            }
+        }
+    }
+    
+
+
+
+    
+}
