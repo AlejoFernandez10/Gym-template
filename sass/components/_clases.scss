@@ -47,17 +47,18 @@
                 position: relative;
                 @include flex(row,center,center);
 
-                background:linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../assets/pexels-rodnae-productions-7187935.jpg") no-repeat center center;
+                background:linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../assets/pexels-rodnae-productions-7187935.jpg") no-repeat center center;
                 border-radius: 5px;
                 span{
                     position:absolute;
-                    color: $secondaryColor;
+                    color: #fff;
+                    font-weight: bold;
                     font-size: 25px;
                     display: none;
                 }
 
                 &:hover{
-                    background: linear-gradient( rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("../assets/pexels-rodnae-productions-7187935.jpg") no-repeat center center;
+                    background: linear-gradient(rgba(31,225,186,0.5), rgba(31,225,186,0.5)), url("../assets/pexels-rodnae-productions-7187935.jpg") no-repeat center center;
                     transform: scale(1.05);
                     span{
                         display: inline;
@@ -66,14 +67,14 @@
                 }
                 
             }
-            
+
 
              .spinning{
 
                 background:url("../assets/pexels-cottonbro-studio-7689278.jpg") no-repeat center center;
 
                 &:hover{
-                    background: linear-gradient( rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("../assets/pexels-cottonbro-studio-7689278.jpg") no-repeat center center;
+                    background: linear-gradient(rgba(31,225,186,0.4), rgba(31,225,186,0.4)), url("../assets/pexels-cottonbro-studio-7689278.jpg") no-repeat center center;
                     transform: scale(1.05);
 
                     transition: .4s;
@@ -86,7 +87,7 @@
                 background-size: cover;
                 transform: scale(1.00);
                 &:hover{
-                    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("../assets/pexels-pixabay-414029.jpg") no-repeat center center fixed;
+                    background: linear-gradient(rgba(31,225,186,0.4), rgba(31,225,186,0.4)), url("../assets/pexels-pixabay-414029.jpg") no-repeat center center fixed;
                     background-size: cover;
                     transform: scale(1.05);
                     transition: .4s;
@@ -99,7 +100,7 @@
                 background-size: cover;
                 transform: scale(1.00);
                 &:hover{
-                    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("../assets/training-828741_1920.jpg") no-repeat center center fixed;
+                    background: linear-gradient(rgba(31,225,186,0.4), rgba(31,225,186,0.4)), url("../assets/training-828741_1920.jpg") no-repeat center center fixed;
                     background-size: cover;
                     transform: scale(1.05);
                     transition: .4s;
@@ -133,9 +134,93 @@
 
     .clases-fechas{
         width: 100%;
+        
         height: 100vh;
         background:url("../assets/627e923543fae8b1070581d0_FONDO\ plataformas.jpg") no-repeat center top fixed;
         background-size: cover;
+
+        @include flex(row,center,top);
+
+        .diasDeClase-container{
+            width: 100%;
+            max-width: 1200px;
+            @include flex(row,center,top);
+
+            .diasDeClase{
+                width: 50%;
+                padding-left: 50px;
+                @include flex(column,center,flex-start);
+                
+                h3{
+                    margin-top: 50px;
+                    margin-bottom: 50px;
+                    font-size: 45px;
+                    color: $bgColor1;
+                }
+                .diaClase{
+                    text-align: center;
+                    color: #000;
+                    border: none;
+                    background-color:#ddd;
+                    border-radius: 20px;
+                    padding: 5px;
+                    width: 15ch;
+                    padding: 10px;
+                    margin-bottom: 15px;
+                    font-size: 20px;
+                    transition: .3s;
+                    &:hover{
+                        color: #eee;
+                        background-color: $secondaryColor;
+                        cursor: pointer;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
+            .horarios{
+                width: 50%;
+                margin-top: 250px;
+                
+                .tabla{
+                    text-align: center;
+                    width: 100%;                    
+                    border-radius: 10px;
+                    background-color: $secondaryColor;
+                    color: #eee;
+                    border: 1px solid #fff;
+
+                    .thead{
+                        border: 1px solid #fff;
+                        background-color: #2aaa;
+                        
+                    }
+                    .tbody{
+                        border: 1px solid #fff;
+                        font-size: 17px;
+
+                        .table-row{
+                            
+                            .table-element{
+                                border: 1px solid #eee;
+                            }
+                        }
+                    }
+
+                }
+                
+            }
+            .animacion{
+                animation: aparicionComoFunciona 1s 1;
+    
+            @keyframes aparicionComoFunciona{
+                0%{
+                    opacity: 0%;
+                }
+                100%{opacity: 100%;}
+            }
+            }
+        }
     }
 
     

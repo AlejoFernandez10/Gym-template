@@ -1,6 +1,8 @@
 const mainTitle = document.getElementById(`clasesTitle`);
 
 
+
+
 const efectoEscritura = (text = '', time = 0, etiqueta = '') => {
 
     
@@ -11,7 +13,7 @@ const efectoEscritura = (text = '', time = 0, etiqueta = '') => {
 
     setInterval(()=>{
         if( counter === arrayCH.length){
-            etiqueta.innerHTML = text.substring(0, borrador)
+            etiqueta.innerHTML = text.substring(0, borrador)                //Animacion titulo seccion Clases
             borrador--;
             if(borrador === 0){
                 etiqueta.innerHTML = ``;
@@ -33,3 +35,7 @@ const efectoEscritura = (text = '', time = 0, etiqueta = '') => {
 mainTitle.style.color = "#eee"
 
 efectoEscritura(`TENEMOS TODO LO QUE BUSCÁS`, 110, mainTitle);
+
+
+
+

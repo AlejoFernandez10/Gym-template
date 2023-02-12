@@ -1,4 +1,9 @@
-/* Components */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+} /* Components */
 .header {
   width: 100%;
   height: auto;
@@ -48,7 +53,7 @@
   align-items: center;
 }
 .body-container .main-container .home-section {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../assets/pexels-andrea-piacquadio-3838389.jpg) no-repeat top center fixed;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../assets/pexels-andrea-piacquadio-3838389.jpg) no-repeat top center fixed;
   background-size: cover;
   height: 100vh;
   width: 100%;
@@ -134,7 +139,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../assets/pexels-rodnae-productions-7187935.jpg") no-repeat center center;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/pexels-rodnae-productions-7187935.jpg") no-repeat center center;
   border-radius: 5px;
 }
 .clases-section .clases-container .clases-info .clase .clases-img {
@@ -145,12 +150,13 @@
 }
 .clases-section .clases-container .clases-info .clase span {
   position: absolute;
-  color: #1fe1ba;
+  color: #fff;
+  font-weight: bold;
   font-size: 25px;
   display: none;
 }
 .clases-section .clases-container .clases-info .clase:hover {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../assets/pexels-rodnae-productions-7187935.jpg") no-repeat center center;
+  background: linear-gradient(rgba(31, 225, 186, 0.5), rgba(31, 225, 186, 0.5)), url("../assets/pexels-rodnae-productions-7187935.jpg") no-repeat center center;
   transform: scale(1.05);
   transition: 0.4s;
 }
@@ -161,7 +167,7 @@
   background: url("../assets/pexels-cottonbro-studio-7689278.jpg") no-repeat center center;
 }
 .clases-section .clases-container .clases-info .spinning:hover {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../assets/pexels-cottonbro-studio-7689278.jpg") no-repeat center center;
+  background: linear-gradient(rgba(31, 225, 186, 0.4), rgba(31, 225, 186, 0.4)), url("../assets/pexels-cottonbro-studio-7689278.jpg") no-repeat center center;
   transform: scale(1.05);
   transition: 0.4s;
 }
@@ -171,7 +177,7 @@
   transform: scale(1);
 }
 .clases-section .clases-container .clases-info .funcional:hover {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../assets/pexels-pixabay-414029.jpg") no-repeat center center fixed;
+  background: linear-gradient(rgba(31, 225, 186, 0.4), rgba(31, 225, 186, 0.4)), url("../assets/pexels-pixabay-414029.jpg") no-repeat center center fixed;
   background-size: cover;
   transform: scale(1.05);
   transition: 0.4s;
@@ -182,7 +188,7 @@
   transform: scale(1);
 }
 .clases-section .clases-container .clases-info .musculacion:hover {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../assets/training-828741_1920.jpg") no-repeat center center fixed;
+  background: linear-gradient(rgba(31, 225, 186, 0.4), rgba(31, 225, 186, 0.4)), url("../assets/training-828741_1920.jpg") no-repeat center center fixed;
   background-size: cover;
   transform: scale(1.05);
   transition: 0.4s;
@@ -210,4 +216,92 @@
   height: 100vh;
   background: url("../assets/627e923543fae8b1070581d0_FONDO plataformas.jpg") no-repeat center top fixed;
   background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: top;
+}
+.clases-section .clases-fechas .diasDeClase-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: top;
+}
+.clases-section .clases-fechas .diasDeClase-container .diasDeClase {
+  width: 50%;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.clases-section .clases-fechas .diasDeClase-container .diasDeClase h3 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 45px;
+  color: #202128;
+}
+.clases-section .clases-fechas .diasDeClase-container .diasDeClase .diaClase {
+  text-align: center;
+  color: #000;
+  border: none;
+  background-color: #ddd;
+  border-radius: 20px;
+  padding: 5px;
+  width: 15ch;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+.clases-section .clases-fechas .diasDeClase-container .diasDeClase .diaClase:hover {
+  color: #eee;
+  background-color: #1fe1ba;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.clases-section .clases-fechas .diasDeClase-container .horarios {
+  width: 50%;
+  margin-top: 250px;
+}
+.clases-section .clases-fechas .diasDeClase-container .horarios .tabla {
+  text-align: center;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #1fe1ba;
+  color: #eee;
+  border: 1px solid #fff;
+}
+.clases-section .clases-fechas .diasDeClase-container .horarios .tabla .thead {
+  border: 1px solid #fff;
+  background-color: rgba(34, 170, 170, 0.6666666667);
+}
+.clases-section .clases-fechas .diasDeClase-container .horarios .tabla .tbody {
+  border: 1px solid #fff;
+  font-size: 17px;
+}
+.clases-section .clases-fechas .diasDeClase-container .horarios .tabla .tbody .table-row .table-element {
+  border: 1px solid #eee;
+}
+.clases-section .clases-fechas .diasDeClase-container .animacion {
+  -webkit-animation: aparicionComoFunciona 1s 1;
+          animation: aparicionComoFunciona 1s 1;
+}
+@-webkit-keyframes aparicionComoFunciona {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes aparicionComoFunciona {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
 }/*# sourceMappingURL=styles.css.map */

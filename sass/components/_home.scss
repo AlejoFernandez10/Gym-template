@@ -9,7 +9,7 @@
         
         @include flex(column,center,center);
         .home-section{
-            background:linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../../assets/pexels-andrea-piacquadio-3838389.jpg) no-repeat top center fixed;
+            background:linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../assets/pexels-andrea-piacquadio-3838389.jpg) no-repeat top center fixed;
             background-size: cover;
             height: 100vh;
             width: 100%; 
