@@ -139,25 +139,28 @@
         background:url("../assets/627e923543fae8b1070581d0_FONDO\ plataformas.jpg") no-repeat center top fixed;
         background-size: cover;
 
-        @include flex(row,center,top);
+        @include flex(row,center,center);
 
         .diasDeClase-container{
             width: 100%;
             max-width: 1200px;
-            @include flex(row,center,top);
+            @include flex(row,center,center);
+            
 
             .diasDeClase{
                 width: 50%;
                 padding-left: 50px;
-                @include flex(column,center,flex-start);
+                @include flex(column,center,center);
                 
+
                 h3{
-                    margin-top: 50px;
+                    
                     margin-bottom: 50px;
                     font-size: 45px;
                     color: $bgColor1;
                 }
                 .diaClase{
+                    
                     text-align: center;
                     color: #000;
                     border: none;
@@ -180,7 +183,7 @@
 
             .horarios{
                 width: 50%;
-                margin-top: 250px;
+
                 
                 .tabla{
                     text-align: center;
@@ -189,6 +192,7 @@
                     background-color: $secondaryColor;
                     color: #eee;
                     border: 1px solid #fff;
+                    margin-top: 80px;
 
                     .thead{
                         border: 1px solid #fff;

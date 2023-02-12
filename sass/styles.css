@@ -219,7 +219,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: top;
+  align-items: center;
 }
 .clases-section .clases-fechas .diasDeClase-container {
   width: 100%;
@@ -227,7 +227,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: top;
+  align-items: center;
 }
 .clases-section .clases-fechas .diasDeClase-container .diasDeClase {
   width: 50%;
@@ -235,10 +235,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 .clases-section .clases-fechas .diasDeClase-container .diasDeClase h3 {
-  margin-top: 50px;
   margin-bottom: 50px;
   font-size: 45px;
   color: #202128;
@@ -264,7 +263,6 @@
 }
 .clases-section .clases-fechas .diasDeClase-container .horarios {
   width: 50%;
-  margin-top: 250px;
 }
 .clases-section .clases-fechas .diasDeClase-container .horarios .tabla {
   text-align: center;
@@ -273,6 +271,7 @@
   background-color: #1fe1ba;
   color: #eee;
   border: 1px solid #fff;
+  margin-top: 80px;
 }
 .clases-section .clases-fechas .diasDeClase-container .horarios .tabla .thead {
   border: 1px solid #fff;
