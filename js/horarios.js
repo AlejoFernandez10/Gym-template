@@ -8,8 +8,12 @@ const obtenerDias = document.querySelectorAll(`.dia`);
 const horariosTabla = document.getElementById(`horariosTabla`);
 const tabla = document.getElementById(`tabla-tbody`)
 
+<<<<<<< HEAD
 
 
+=======
+const diasDeClase = document.getElementById(`diasDeClase`)
+>>>>>>> 6bb818982d500c6d386ae4c26a1ddf9fd35eb554
 
 horariosTabla.style.display = "none";
 
@@ -50,6 +54,10 @@ obtenerDias.forEach(dia =>{
         tabla.innerHTML = ` `;
         horariosTabla.style.display ="inline";
         horariosTabla.classList.add("animacion");
+<<<<<<< HEAD
+=======
+        diasDeClase.style.alignItems = "flex-start"
+>>>>>>> 6bb818982d500c6d386ae4c26a1ddf9fd35eb554
         
         diasDeClase.style.alignItems = "flex-start"
         

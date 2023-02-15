@@ -172,19 +172,29 @@
             width: 100%;
             max-width: 1200px;
             @include flex(row,center,center);
+<<<<<<< HEAD
+=======
+            
+>>>>>>> 6bb818982d500c6d386ae4c26a1ddf9fd35eb554
 
             .diasDeClase{
                 width: 50%;
                 padding-left: 50px;
                 @include flex(column,center,center);
                 
-                h3{
 
+                h3{
+<<<<<<< HEAD
+
+=======
+                    
+>>>>>>> 6bb818982d500c6d386ae4c26a1ddf9fd35eb554
                     margin-bottom: 50px;
                     font-size: 45px;
                     color: $bgColor1;
                 }
                 .diaClase{
+                    
                     text-align: center;
                     color: #000;
                     border: none;
@@ -207,7 +217,11 @@
 
             .horarios{
                 width: 50%;
+<<<<<<< HEAD
                 margin-top: 100px;
+=======
+
+>>>>>>> 6bb818982d500c6d386ae4c26a1ddf9fd35eb554
                 
                 .tabla{
                     text-align: center;
@@ -216,6 +230,7 @@
                     background-color: $secondaryColor;
                     color: #eee;
                     border: 1px solid #fff;
+                    margin-top: 80px;
 
                     .thead{
                         border: 1px solid #fff;
