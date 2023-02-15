@@ -44,12 +44,17 @@
 }
 .header .reaparecer {
   position: fixed;
-  background-color: #222;
+  background-color: #111;
   animation: aparicion 0.4s 1;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 7px;
+  padding-top: 7px;
   margin-top: 0;
   z-index: 100;
+}
+.header .reaparecer:hover {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  transition: 0.3s;
 }
 .header .reaparecer .animacion {
   animation: aparicion 1s 1;
@@ -143,7 +148,7 @@
   padding-right: 50px;
   font-size: 40px;
   color: #eee;
-  margin-top: 80px;
+  margin-top: 100px;
   margin-bottom: 80px;
 }
 .clases-section .clases-container .clases-info {
@@ -276,14 +281,14 @@
 }
 .clases-section .clases-fechas .diasDeClase-container .diasDeClase {
   width: 50%;
-  padding-left: 50px;
+  padding-left: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .clases-section .clases-fechas .diasDeClase-container .diasDeClase h3 {
-  margin-bottom: 50px;
+  margin-bottom: 80px;
   font-size: 45px;
   color: #202128;
 }
@@ -308,7 +313,7 @@
 }
 .clases-section .clases-fechas .diasDeClase-container .horarios {
   width: 50%;
-  margin-top: 100px;
+  margin-top: 20px;
 }
 .clases-section .clases-fechas .diasDeClase-container .horarios .tabla {
   text-align: center;
@@ -340,4 +345,99 @@
   100% {
     opacity: 100%;
   }
+}
+
+.planes-section {
+  height: 100vh;
+  width: 100%;
+  background-color: #202128;
+  margin-bottom: 50px;
+}
+.planes-section .planes-title {
+  text-align: center;
+  color: #eee;
+  font-size: 50px;
+  margin-top: 6%;
+}
+.planes-section .planes-container {
+  height: auto;
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-content: center;
+  margin-top: 5%;
+  gap: 30px;
+}
+.planes-section .planes-container .planes {
+  background-color: #ddd;
+  height: 36rem;
+  width: 100%;
+  border-radius: 20px;
+  text-align: center;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.planes-section .planes-container .planes:hover {
+  transform: scale(1.02);
+  transition: 0.3s;
+}
+.planes-section .planes-container .planes h5 {
+  font-size: 40px;
+  margin-bottom: 50px;
+  padding-top: 50px;
+  font-weight: 600;
+  color: #202128;
+}
+.planes-section .planes-container .planes .precio {
+  font-size: 40px;
+  color: #444;
+  font-weight: bold;
+  margin-bottom: 20px;
+  width: 100%;
+  padding-bottom: 40px;
+  border-bottom: 2px solid #555;
+}
+.planes-section .planes-container .planes .plan-span-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+.planes-section .planes-container .planes .plan-span-container span {
+  margin-top: 10px;
+}
+.planes-section .planes-container .planes .plan-span-container .adquirir-planBtn {
+  align-self: center;
+  margin-top: 60px;
+  background-color: transparent;
+  width: 60%;
+  border-radius: 10px;
+  height: 40px;
+  border: none;
+  background-color: #1fe1ba;
+  color: #eee;
+  transition: 0.3s;
+}
+.planes-section .planes-container .planes .plan-span-container .adquirir-planBtn:hover {
+  transform: scale(1.15);
+}
+.planes-section .planes-container .rookie h5 .spanTitle {
+  color: #1fe1ba;
+}
+.planes-section .planes-container .advanced h5 .spanTitle {
+  color: #c0006e;
+}
+.planes-section .planes-container .advanced .plan-span-container .adquirir-planBtn {
+  background-color: #c0006e;
+}
+.planes-section .planes-container .shark h5 .spanTitle {
+  color: #dc143c;
+}
+.planes-section .planes-container .shark .plan-span-container .adquirir-planBtn {
+  background-color: #dc143c;
 }/*# sourceMappingURL=styles.css.map */

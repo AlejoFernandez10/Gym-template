@@ -1,0 +1,128 @@
+.planes-section{
+    height: 100vh;
+    width: 100%;
+    background-color: $bgColor1;
+    margin-bottom: 50px;
+
+    .planes-title{
+        text-align: center;
+        color: #eee;
+        font-size: 50px;
+        margin-top: 6%;
+        
+    }
+
+    .planes-container{
+        height: auto;
+        max-width: 1300px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        place-content: center;
+        margin-top: 5%;
+        gap: 30px;
+        
+
+        .planes{
+            background-color: #ddd;
+            height: 36rem;
+            width: 100%;
+            border-radius: 20px;
+
+            text-align: center;
+            padding: 15px;
+            @include flex(column,flex-start,center);
+
+            &:hover{
+                transform: scale(1.02);
+                transition: .3s;                
+            }
+
+            h5{
+                font-size: 40px;
+                margin-bottom: 50px;
+                padding-top: 50px;
+                font-weight: 600;
+                color: $bgColor1;
+                
+            }
+
+            .precio{
+                font-size: 40px;
+                color: #444;
+                font-weight: bold;
+                margin-bottom: 20px;
+                width: 100%;
+                padding-bottom: 40px;
+                border-bottom: 2px solid #555;
+            }
+
+            .plan-span-container{
+                @include flex(column,center,flex-start);
+                margin-top: 20px;
+
+                span{
+                    margin-top: 10px;
+                }
+
+                .adquirir-planBtn{
+                    align-self: center;
+                    margin-top: 60px;
+                    background-color: transparent;
+                    width: 60%;
+                    border-radius:10px;
+                    height: 40px;
+                    border: none;
+                    background-color: $secondaryColor;
+                    color: #eee;
+                    transition: .3s;
+
+                    &:hover{
+                        transform: scale(1.15);                 
+                        
+                    }
+                }
+            }
+        }
+
+        .rookie{
+            h5{
+                .spanTitle{
+                    color: $secondaryColor;
+                }
+            }
+                
+        }
+        .advanced{
+            h5{
+                .spanTitle{
+                    color: #c0006e;
+                }
+
+            } 
+            .plan-span-container{
+                .adquirir-planBtn{
+                    background-color:#c0006e ;
+                }
+            }
+                
+        }
+
+        .shark{
+            h5{
+                .spanTitle{
+                    color: #dc143c;
+                }
+
+            }           
+            
+            .plan-span-container{
+                .adquirir-planBtn{
+                    background-color:#dc143c ;
+                }
+            }
+        }
+        
+
+    }
+}

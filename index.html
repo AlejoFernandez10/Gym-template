@@ -30,10 +30,10 @@
                     <a class="nav-link active me-4 fs-5" aria-current="page" href="#">Inicio</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active me-4 fs-5" href="#">Sedes</a>
+                    <a class="nav-link active me-4 fs-5" href="#clases" style="scroll-behavior: smooth;">Clases</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active fs-5" href="#" id="class-link">Clases</a>
+                    <a class="nav-link active fs-5" href="#planes" id="class-link" style="scroll-behavior: smooth;">Planes</a>
                   </li>
                   
                 </ul>
@@ -56,6 +56,7 @@
             
         </div>
 
+        <div id="clases"></div>
 
         <div class="clases-section">
 
@@ -165,12 +166,61 @@
                 </div>
         </div>
 
-        <div class="planes-section">
-          <div class="planes-container">
+        <div id="planes"></div>
 
-            <div class="planes"></div>
-            <div class="planes"></div>
-            <div class="planes"></div>
+        <div class="planes-section" >
+          <h3 class="planes-title" data-aos="fade-right" data-aos-duration="900" >Nuestros Planes</h3>
+          <div class="planes-container">  
+
+            
+            <div class="planes rookie" data-aos="fade-up" data-aos-duration="1000">
+              <h5>Plan <span class="spanTitle">Rookie</span></h5>
+              <span class="precio">$15.000<span style="font-size: 18px;">/tarjeta</span></span>
+
+              <div class="plan-span-container">
+                <span> <img src="./assets/check.png" alt=""> Acceso gratis a clases de 1 actividad</span>
+                <span><img src="./assets/check.png" alt=""> Armado de rutina segun necesidad</span>
+                <span><img src="./assets/x.png" alt=""> Armado de dieta según necesidad </span>
+                <span><img src="./assets/x.png" alt=""> Clases de cualquier actividad por Zoom </span>
+
+                <button class="adquirir-planBtn">Cómo pagar</button>
+              </div>
+
+              
+            </div>
+
+            <div class="planes advanced" data-aos="fade-up" data-aos-duration="1200">
+               <h5>Plan <span class="spanTitle">Advanced</span></h5>
+               <span class="precio">$20.000<span style="font-size: 18px;">/tarjeta</span></span>
+
+               <div class="plan-span-container">
+                <span><img src="./assets/check-advanced.png" alt="">  Acceso gratis a clases de 2 actividades</span>
+                <span><img src="./assets/check-advanced.png" alt=""> Armado de rutina según necesidad</span>
+                <span><img src="./assets/check-advanced.png" alt=""> Armado de dieta según necesidad</span>
+                <span><img src="./assets/x-advanced.png" alt=""> Clases de cualquier actividad por Zoom </span>
+
+                <button class="adquirir-planBtn">Cómo pagar</button>
+               </div>
+
+               
+            </div>
+
+            <div class="planes shark" data-aos="fade-up" data-aos-duration="1400">
+                <h5>Plan <span class="spanTitle">Shark</span></h5>
+                <span class="precio">$30.000<span style="font-size: 18px;">/tarjeta</span></span>
+
+                <div class="plan-span-container">
+                  <span><img src="./assets/check-shark.png" alt=""> Acceso gratis a todas las actividades</span>
+                  <span><img src="./assets/check-shark.png" alt=""> Armado de rutina según necesidad</span>
+                  <span><img src="./assets/check-shark.png" alt=""> Armado de dieta según necesidad</span>
+                  <span><img src="./assets/check-shark.png" alt=""> Clases de cualquier actividad por zoom</span>
+
+                  <button class="adquirir-planBtn">Cómo pagar</button>
+                </div>
+                
+
+                
+            </div>
 
           </div>
         </div>
@@ -188,6 +238,11 @@
     <script src="./js/horarios.js" type="module"></script>
     <script src="./js/actividades.js" type="module"></script>
 
+    <!-- SWEET ALERT -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <!-- AOS LIBRARY -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();

@@ -1,6 +1,6 @@
+
+
 const mainTitle = document.getElementById(`clasesTitle`);
-
-
 
 
 const efectoEscritura = (text = '', time = 0, etiqueta = '') => {
@@ -48,3 +48,22 @@ window.addEventListener("scroll", ()=>{
 })
 
 
+//SWEET ALERT
+
+const adquirirBtn = document.querySelectorAll(`.adquirir-planBtn`);
+
+adquirirBtn.forEach(btn =>{
+
+    btn.addEventListener(`click`,()=>{
+
+        Swal.fire({
+            title: 'Como pagar?',
+            text: `Si desea adquirir este plan deberá abonarlo prescencialmente en la sucursal del gimnasio.`,
+            icon: 'info',
+            confirmButtonText: `Ok!`
+          })
+
+          
+    })
+
+})

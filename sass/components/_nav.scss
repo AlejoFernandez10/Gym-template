@@ -55,12 +55,19 @@
     }
     .reaparecer{
         position: fixed;
-        background-color: #222;
+        background-color: #111;
         animation: aparicion .4s 1;
-        padding-top: 15px;
-        padding-bottom: 15px;
+        padding-bottom: 7px;
+        padding-top: 7px;
         margin-top: 0;
         z-index: 100;
+
+
+        &:hover{
+            padding-top: 15px;
+            padding-bottom: 15px;
+            transition: .3s;
+        }
 
         .animacion{
             animation: aparicion 1s 1;
