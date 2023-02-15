@@ -7,11 +7,14 @@
 .header {
   width: 100%;
   height: auto;
-  background-color: transparent;
+  position: relative;
 }
 .header .navbar {
   width: 100%;
+  height: auto;
+  position: absolute;
   margin-top: 15px;
+  background-color: transparent;
 }
 .header .navbar .container-fluid {
   max-width: 1200px;
@@ -38,6 +41,26 @@
   width: 10ch;
   color: #fff;
   transform: scale(1);
+}
+.header .reaparecer {
+  position: fixed;
+  background-color: #222;
+  animation: aparicion 0.4s 1;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 0;
+  z-index: 100;
+}
+.header .reaparecer .animacion {
+  animation: aparicion 1s 1;
+}
+@keyframes aparicion {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 
 .body-container {
@@ -193,6 +216,28 @@
   transform: scale(1.05);
   transition: 0.4s;
 }
+.clases-section .clases-container .clases-info .calistenia {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../assets/street-workout-2628919_640 (1).jpg") no-repeat center center fixed;
+  background-size: cover;
+  transform: scale(1);
+}
+.clases-section .clases-container .clases-info .calistenia:hover {
+  background: linear-gradient(rgba(31, 225, 186, 0.4), rgba(31, 225, 186, 0.4)), url("../assets/street-workout-2628919_640 (1).jpg") no-repeat center center fixed;
+  background-size: cover;
+  transform: scale(1.05);
+  transition: 0.4s;
+}
+.clases-section .clases-container .clases-info .aireLibre {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../assets/workout-5914643_640 (1).jpg") no-repeat center center fixed;
+  background-size: cover;
+  transform: scale(1);
+}
+.clases-section .clases-container .clases-info .aireLibre:hover {
+  background: linear-gradient(rgba(31, 225, 186, 0.4), rgba(31, 225, 186, 0.4)), url("../assets/workout-5914643_640 (1).jpg") no-repeat center center fixed;
+  background-size: cover;
+  transform: scale(1.05);
+  transition: 0.4s;
+}
 .clases-section .clases-container #classBtn {
   text-align: center;
   margin-top: 3px;
@@ -203,7 +248,7 @@
   font-weight: 500;
   color: #fff;
   margin-top: 100px;
-  margin-bottom: 70px;
+  margin-bottom: 120px;
   border: none;
   scale: 1.1;
 }
@@ -219,7 +264,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: top;
+  align-items: center;
 }
 .clases-section .clases-fechas .diasDeClase-container {
   width: 100%;
@@ -227,7 +272,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: top;
+  align-items: center;
 }
 .clases-section .clases-fechas .diasDeClase-container .diasDeClase {
   width: 50%;
@@ -235,10 +280,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 .clases-section .clases-fechas .diasDeClase-container .diasDeClase h3 {
-  margin-top: 50px;
   margin-bottom: 50px;
   font-size: 45px;
   color: #202128;
@@ -264,7 +308,7 @@
 }
 .clases-section .clases-fechas .diasDeClase-container .horarios {
   width: 50%;
-  margin-top: 250px;
+  margin-top: 100px;
 }
 .clases-section .clases-fechas .diasDeClase-container .horarios .tabla {
   text-align: center;
@@ -286,16 +330,7 @@
   border: 1px solid #eee;
 }
 .clases-section .clases-fechas .diasDeClase-container .animacion {
-  -webkit-animation: aparicionComoFunciona 1s 1;
-          animation: aparicionComoFunciona 1s 1;
-}
-@-webkit-keyframes aparicionComoFunciona {
-  0% {
-    opacity: 0%;
-  }
-  100% {
-    opacity: 100%;
-  }
+  animation: aparicionComoFunciona 1s 1;
 }
 @keyframes aparicionComoFunciona {
   0% {

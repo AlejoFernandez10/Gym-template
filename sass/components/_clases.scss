@@ -106,6 +106,33 @@
                     transition: .4s;
                 }
             }
+
+            .calistenia{
+
+                background: linear-gradient( rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../assets/street-workout-2628919_640\ \(1\).jpg") no-repeat center center fixed;
+                background-size: cover;
+                transform: scale(1.00);
+                &:hover{
+                    background: linear-gradient(rgba(31,225,186,0.4), rgba(31,225,186,0.4)), url("../assets/street-workout-2628919_640\ \(1\).jpg") no-repeat center center fixed;
+                    background-size: cover;
+                    transform: scale(1.05);
+                    transition: .4s;
+                }
+            }
+
+            .aireLibre{
+
+                background: linear-gradient( rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../assets/workout-5914643_640\ \(1\).jpg") no-repeat center center fixed;
+                background-size: cover;
+                transform: scale(1.00);
+                &:hover{
+                    background: linear-gradient(rgba(31,225,186,0.4), rgba(31,225,186,0.4)), url("../assets/workout-5914643_640\ \(1\).jpg") no-repeat center center fixed;
+                    background-size: cover;
+                    transform: scale(1.05);
+                    transition: .4s;
+                }
+            }
+
         }
 
         #classBtn{
@@ -118,7 +145,7 @@
             font-weight: 500; 
             color: #fff;
             margin-top: 100px;
-            margin-bottom: 70px;
+            margin-bottom: 120px;
             border: none;
             scale: 1.1;
             &:hover{
@@ -139,20 +166,20 @@
         background:url("../assets/627e923543fae8b1070581d0_FONDO\ plataformas.jpg") no-repeat center top fixed;
         background-size: cover;
 
-        @include flex(row,center,top);
+        @include flex(row,center,center);
 
         .diasDeClase-container{
             width: 100%;
             max-width: 1200px;
-            @include flex(row,center,top);
+            @include flex(row,center,center);
 
             .diasDeClase{
                 width: 50%;
                 padding-left: 50px;
-                @include flex(column,center,flex-start);
+                @include flex(column,center,center);
                 
                 h3{
-                    margin-top: 50px;
+
                     margin-bottom: 50px;
                     font-size: 45px;
                     color: $bgColor1;
@@ -180,7 +207,7 @@
 
             .horarios{
                 width: 50%;
-                margin-top: 250px;
+                margin-top: 100px;
                 
                 .tabla{
                     text-align: center;

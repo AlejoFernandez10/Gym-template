@@ -11,13 +11,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <title>Gym Template</title>
 </head>
 <body class="body-container">
     
-    <div class="header">
-        <nav class="navbar navbar-dark navbar-expand-lg bg-transparent position-absolute">
+    <div class="header" >
+        <nav class="navbar navbar-dark navbar-expand-lg " id="header">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">Logo</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,20 +62,20 @@
             <div class="clases-container">
                 
                 <div class="clases-title-container">
-                    <h2 class="clases-title" id="clasesTitle" style="height:48px;padding-bottom: 80px;"></h2>
+                    <h2 class="clases-title" id="clasesTitle" style="height:48px;padding-bottom: 80px;" data-aos="fade-up"></h2>
                 </div>
 
 
                 <div class="clases-info">
 
                     
-                    <div class="clase boxeo" >
+                    <div class="clase boxeo" data-aos="fade-right">
                         <span>Boxeo</span>
                         <div src=""  class="clases-img" alt=""></div>
                         
                     </div>
 
-                    <div class="clase spinning" >
+                    <div class="clase spinning" data-aos="fade-left">
 
 
                         <span>Spinning</span>
@@ -82,32 +83,46 @@
                         
                     </div>
 
-                    <div class="clase funcional" >
+                    <div class="clase funcional" data-aos="fade-up" data-aos-duration="1000">
                         <span>Funcional</span>
                         <div src="" class="clases-img" alt=""></div>
 
 
                     </div>
 
-                    <div class="clase musculacion" >
+                    <div class="clase musculacion" data-aos="fade-up" data-aos-duration="1000">
 
                         <span>Musculacion</span>
                         <div src="" class="clases-img" alt=""></div>
                         
                     </div>
 
+                    <div class="clase calistenia" data-aos="fade-up" data-aos-duration="1000">
+
+                      <span>Calistenia</span>
+                      <div src="" class="clases-img" alt=""></div>
+                      
+                  </div>
+
+                  <div class="clase aireLibre" data-aos="fade-up" data-aos-duration="1000">
+
+                    <span>Aire Libre</span>
+                    <div src="" class="clases-img" alt=""></div>
+                    
                 </div>
 
-                <button id="classBtn">Ver Fechas</button>
+                </div>
+
+                <button id="classBtn" data-aos="fade-up">Ver Fechas</button>
 
             </div>
 
 
                 <div class="clases-fechas">
 
-                    <div class="diasDeClase-container">
+                    <div class="diasDeClase-container" data-aos="fade-up" data-aos-duration="1000">
 
-                      <div class="diasDeClase">
+                      <div class="diasDeClase" id="diasDeClase">
                         <h3>Horario de clases</h3>
                         <button class="diaClase dia Lunes" value="Lunes">Lunes</button>
                         <button class="diaClase dia Martes" value="Martes">Martes</button>
@@ -145,6 +160,16 @@
                     
                 </div>
         </div>
+
+        <div class="planes-section">
+          <div class="planes-container">
+
+            <div class="planes"></div>
+            <div class="planes"></div>
+            <div class="planes"></div>
+
+          </div>
+        </div>
     </main>
 
 
@@ -158,5 +183,10 @@
     <script src="./js/main.js"></script>
     <script src="./js/horarios.js" type="module"></script>
     <script src="./js/actividades.js" type="module"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>

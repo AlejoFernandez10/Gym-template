@@ -9,10 +9,6 @@ const horariosTabla = document.getElementById(`horariosTabla`);
 const tabla = document.getElementById(`tabla-tbody`)
 
 
-const actividadBoxeo = document.getElementById(`actividadBoxeo`)
-const horario1 = document.getElementById(`horarioBoxeo1`)
-
-const profesorBoxeo = document.getElementById(`profesorBoxeo`)
 
 
 horariosTabla.style.display = "none";
@@ -48,14 +44,14 @@ const infoDelDia = (actividad, dia)=>{
 }
 
 
-
+const diasDeClase = document.getElementById(`diasDeClase`)
 obtenerDias.forEach(dia =>{
     dia.addEventListener(`click`,()=>{                           //Array con los dias
         tabla.innerHTML = ` `;
         horariosTabla.style.display ="inline";
         horariosTabla.classList.add("animacion");
-
         
+        diasDeClase.style.alignItems = "flex-start"
         
         infoDelDia(boxeo, dia);
         infoDelDia(spinning, dia);
@@ -63,7 +59,7 @@ obtenerDias.forEach(dia =>{
         
         setTimeout(()=>{
             horariosTabla.classList.remove("animacion");
-        }, 1000)
+        }, 500)
     })         
 })
 

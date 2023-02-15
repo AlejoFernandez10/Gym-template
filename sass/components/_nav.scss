@@ -1,12 +1,16 @@
 .header{
     width: 100%;
     height: auto;
-    background-color: transparent;
+    position: relative;
     
 
     .navbar{
         width: 100%;
+        height: auto;
+        position: absolute;
         margin-top: 15px;
+        background-color: transparent;
+
         .container-fluid{
             max-width: 1200px;
 
@@ -47,6 +51,26 @@
                 }
             }
 
+        }
+    }
+    .reaparecer{
+        position: fixed;
+        background-color: #222;
+        animation: aparicion .4s 1;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-top: 0;
+        z-index: 100;
+
+        .animacion{
+            animation: aparicion 1s 1;
+
+        @keyframes aparicion{
+            0%{
+                opacity: 0%;
+            }
+            100%{opacity: 100%;}
+        }
         }
     }
 }

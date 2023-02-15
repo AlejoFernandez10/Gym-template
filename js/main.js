@@ -34,8 +34,17 @@ const efectoEscritura = (text = '', time = 0, etiqueta = '') => {
 
 mainTitle.style.color = "#eee"
 
-efectoEscritura(`TENEMOS TODO LO QUE BUSCÁS`, 110, mainTitle);
+efectoEscritura(`TENEMOS TODO LO QUE BUSCÁS`, 80, mainTitle);
 
 
+
+
+//EFECTO on-scroll NAV
+
+
+window.addEventListener("scroll", ()=>{
+    const header = document.getElementById(`header`);
+    header.classList.toggle("reaparecer", window.scrollY > 500);
+})
 
 
