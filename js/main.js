@@ -1,5 +1,7 @@
-
-
+const cartContainer =document.getElementById(`cartContainer`);
+const carritoCounter = document.getElementById(`carritoCounter`)
+const carritoIcon = document.getElementById(`carritoIcon`)
+const mainContainer = document.getElementById(`mainContainer`)
 const mainTitle = document.getElementById(`clasesTitle`);
 
 
@@ -48,6 +50,16 @@ window.addEventListener("scroll", ()=>{
 })
 
 
+
+const mostrarCarrito = ()=>{
+
+    cartContainer.style.display = "inline"
+}
+
+mainContainer.addEventListener(`click`, ()=>{
+    cartContainer.style.display = "none"
+})
+
 //SWEET ALERT
 
 const adquirirBtn = document.querySelectorAll(`.adquirir-planBtn`);
@@ -55,15 +67,18 @@ const adquirirBtn = document.querySelectorAll(`.adquirir-planBtn`);
 adquirirBtn.forEach(btn =>{
 
     btn.addEventListener(`click`,()=>{
-
+        carritoCounter.innerHTML ++;
         Swal.fire({
-            title: 'Como pagar?',
-            text: `Si desea adquirir este plan deberá abonarlo prescencialmente en la sucursal del gimnasio.`,
-            icon: 'info',
-            confirmButtonText: `Ok!`
+            title: 'Plan agregado!',
+            text: `Su plan fue agregado al carrito correctamente.`,
+            icon: 'success',            
+            timer:1000,
           })
 
-          
+
     })
 
 })
+
+
+let carrito = []
