@@ -4,6 +4,32 @@
     position: relative;
 
     
+    .wpp-container{
+
+        
+        .contactanos-popUp{
+            display: none;
+            color: #fff;
+            position:fixed;
+            right:70px;
+            bottom:20px;
+            padding-right: 15px;
+            padding-bottom: 15px;
+            font-weight: bold;
+            
+        }
+        .wpp-contact{
+            position:fixed;
+            height:70px;
+            right:0;
+            bottom:0;
+            padding-right: 15px;
+            padding-bottom: 15px;
+            z-index: 1300;
+        }&:hover{
+            .contactanos-popUp{display: inline}
+        }
+    }
     .cart{
         display: none;
         position: fixed;        
@@ -37,7 +63,7 @@
 
 
         .home-section{
-            background:linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../assets/pexels-andrea-piacquadio-3838389.jpg) no-repeat top center fixed;
+            background:linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../assets/pexels-andrea-piacquadio-3838389.jpg) no-repeat right center fixed;
             background-size: cover;
             height: 100vh;
             width: 100%; 
@@ -45,36 +71,90 @@
             @include flex(column,center,center);
 
             .home-info{
-                width: 100%;
-                max-width: 1200px;
-                @include flex(column,center,left);
+                
 
-                .main-title{
-                    text-align: left;
-                    max-width: 50%;
-                    font-size: 65px;
-                    line-height: 70px;
-                    color: #eee;
+                @include min-mobile{
+                    width: 100%;
+                    max-width: 1200px;
+                    @include flex(column,center,center);                    
+                }
+                
+                @include desktop{
+                    @include flex(column,center,flex-start);
+                    padding-left: 5%; 
+                }
+                @media screen and (min-width:1300px) {
+                    padding-left: 0;
+                }
+
+                .main-title{                    
+
+                    @include min-mobile{
+                        font-size: 40px;
+                        line-height: 50px;
+                        color: #eee;
+                        max-width: 90%;
+                        text-align: center;
+                    }
+                    @include max-mobile{
+                        font-size: 45px;
+                        max-width: 80%;
+                    }
+                    @media screen and (min-width:550px) {
+                        font-size: 45px;
+                        max-width: 85%;
+                    }
+                    @include min-tablet{
+                        font-size: 55px;
+                        max-width: 80%;
+                        line-height: 70px;                   
+                    }
+                    @include desktop{                                              
+                        font-size: 60px;
+                        width: 60%;
+                        text-align: left;
+                    }
                 }
                 .main-p{
                     margin-top: 30px;
                     margin-left: 10px;
-                    font-size: 20px;
+                    font-size: 15px;
                     color: #ddd;
                     font-weight: 600;
+
+                    @include min-tablet{                        
+                        font-size: 17px;
+                    }
+
+                    @media screen and (min-width:1200px) {
+                        font-size: 21px;
+                        
+                    }
                 }
                 .main-button{
-                    width: 20ch;
+                    width: 19ch;
                     border: 1px solid $secondaryColor;
                     background: transparent;
                     color: #fff;
                     border-radius: 20px;
                     margin-top: 25px;
                     height: 55px;
-                    font-size: 18px;
+                    font-size: 15px;
                     margin-left: 10px;
                     &:hover{
                         background-color: $secondaryColor;
+                    }
+
+                    @include min-tablet{
+                        width: 22ch;
+                        font-size: 17px;
+                    }
+                    @include desktop{                        
+                        font-size:18px;
+                        height: 60px;
+                    }
+                    @media screen and (min-width:1200px) {
+                        font-size: 20px;                        
                     }
                 }
             }

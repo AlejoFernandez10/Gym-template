@@ -1,0 +1,37 @@
+.footer-container{
+    min-height: 40vh;
+    width: 100%;    
+    text-align: center;
+    @include flex(column,space-evenly,center);
+    background-color:  rgb(11, 19, 37) ;
+    color: #fff;
+    background-color: $bgColor1;
+    border-top:1px solid  #101017;
+
+   padding-top: 50px;
+
+    .footer-title{
+        font-size: 35px;
+
+        span{
+            color: $secondaryColor;
+        }
+    }
+
+    .redes-container{
+        @include flex(row,center,center);
+
+        .red-social img{
+            height: 32px;
+            margin-right: 20px;
+
+            &:hover{
+                transform: scale(1.15);
+                transition: .5s;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+}

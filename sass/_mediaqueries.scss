@@ -23,7 +23,7 @@
 }
 
 @mixin min-mobile{
-    @media screen and (min-width:400px) {
+    @media screen and (min-width:280px) {
         @content;
     }
 }

@@ -1,5 +1,5 @@
 .clases-section{
-    height: auto;
+    min-height: 50vh;
     width: 100%;
     background-color: $bgColor1;
 
@@ -16,29 +16,47 @@
             .clases-title{
                 padding-left:50px ;
                 padding-right: 50px;
-                font-size: 40px;
+                
                 color: #eee;
                 margin-top: 100px;
                 margin-bottom: 80px;
+
+                @include max-mobile{
+                    font-size: 30px;
+                }
+                @include min-tablet{
+                    font-size: 35px;
+                }
             }
         }
 
 
         .clases-info{
             max-width: 1100px;
-            width: 100%;
+            width: 75%;
             padding: 0;
             margin: 0;
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
+            
+            
+
+            @include desktop{
+                grid-template-columns: 1fr 1fr;
+                width: 90%;
+            }
+            @media screen and (min-width:1200px) {
+                width: 100%;
+            }
 
             .clase{
+                max-width: 790px;
                 padding: 0;
                 margin: 0;
                 
                 .clases-img{
                     height: 320px;
-                    width: 100%;
+                    max-width: 80%;
                     padding: 0;
                     margin: 0;
                                         
@@ -47,14 +65,19 @@
                 position: relative;
                 @include flex(row,center,center);
 
-                background:linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../assets/pexels-rodnae-productions-7187935.jpg") no-repeat center center;
+                background:linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("../assets/pexels-rodnae-productions-7187935.jpg") no-repeat center center;
+                background-size: cover;
                 border-radius: 5px;
                 span{
                     position:absolute;
                     color: #fff;
+                    text-shadow: 5px 5px 9px #000;
                     font-weight: bold;
                     font-size: 25px;
-                    display: none;
+                    
+                    @include desktop{
+                        display: none;
+                    }
                 }
 
                 &:hover{
@@ -71,7 +94,8 @@
 
              .spinning{
 
-                background:url("../assets/pexels-cottonbro-studio-7689278.jpg") no-repeat center center;
+                background:url("../assets/pexels-cottonbro-studio-7689278.jpg") no-repeat center center fixed;
+                background-size: cover;
 
                 &:hover{
                     background: linear-gradient(rgba(31,225,186,0.4), rgba(31,225,186,0.4)), url("../assets/pexels-cottonbro-studio-7689278.jpg") no-repeat center center;
@@ -162,29 +186,54 @@
     .clases-fechas{
         width: 100%;
         
-        height: 100vh;
+        min-height: 100vh;
         background:url("../assets/627e923543fae8b1070581d0_FONDO\ plataformas.jpg") no-repeat center top fixed;
         background-size: cover;
 
-        @include flex(row,center,center);
+        @include flex(row,center,flex-start);
+
+        /* @include desktop{
+            @include flex(column,center,flex-start);
+        } */
 
         .diasDeClase-container{
             width: 100%;
-            max-width: 1200px;
-            @include flex(row,center,center);
-
-            .diasDeClase{
-                width: 50%;
-                padding-left: 100px;
-                @include flex(column,center,center);
-                
-
-                h3{
-
-                    margin-bottom: 80px;
-                    font-size: 45px;
-                    color: $bgColor1;
+            max-width: 1100px;
+            
+            h3{
+                margin-top: 80px;
+                margin-bottom: 80px;
+                font-size: 30px;
+                text-align: center;
+                color: $bgColor1;
+                @include max-mobile{
+                    font-size: 35px;
                 }
+                @include max-tablet{
+                    font-size: 38px;
+                }
+                @include desktop{
+                    font-size: 43px;
+                }
+            }
+            .diasDeClase{
+                width: 100%;
+                
+                /* @include flex(row,flex-start,center);  */               
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                place-items: center;
+                
+                @include max-mobile{
+                    grid-template-columns: repeat(3,1fr);
+                    width: 80%;
+                    margin: auto;
+                }
+                @include desktop{
+                    grid-template-columns: repeat(6,1fr);
+                    width: 90%;
+                }
+
                 .diaClase{
                     
                     text-align: center;
@@ -192,11 +241,11 @@
                     border: none;
                     background-color:#ddd;
                     border-radius: 20px;
-                    padding: 5px;
-                    width: 15ch;
+                    
+                    width: 14ch;
                     padding: 10px;
                     margin-bottom: 15px;
-                    font-size: 20px;
+                    font-size: 16px;
                     transition: .3s;
                     &:hover{
                         color: #eee;
@@ -204,21 +253,38 @@
                         cursor: pointer;
                         transform: scale(1.1);
                     }
+
+                    @media screen and (min-width:600px) {
+                        font-size: 18px;                        
+                    }
+                    @include desktop{
+                        font-size: 20px;
+                    }
                 }
             }
 
             .horarios{
                 width: 50%;
-                margin-top: 20px;
+                /* margin-top: 20px; */
+                
 
                 .tabla{
                     text-align: center;
-                    width: 100%;                    
+                    width: 90%;                    
                     border-radius: 10px;
                     background-color: $secondaryColor;
                     color: #eee;
                     border: 1px solid #fff;
+                    margin: auto;
                     margin-top: 80px;
+                    margin-bottom: 30px;
+
+                    @include max-tablet{
+                        width: 65%;
+                    }
+                    @include desktop{
+                        width: 75%;
+                    }
 
                     .thead{
                         border: 1px solid #fff;
@@ -227,7 +293,14 @@
                     }
                     .tbody{
                         border: 1px solid #fff;
-                        font-size: 17px;
+                        font-size: 13px;
+
+                        @include max-mobile{
+                            font-size: 15px;
+                        }
+                        @include min-tablet{
+                            font-size: 18px;
+                        }
 
                         .table-row{
                             
