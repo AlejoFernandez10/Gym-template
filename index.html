@@ -20,30 +20,37 @@
 <body class="body-container">
     
     <div class="header" >
-        <nav class="navbar navbar-dark navbar-expand-lg " id="header">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Logo</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav ">
-                  <li class="nav-item">
-                    <a class="nav-link active me-4 fs-5" aria-current="page" href="#">Inicio</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active me-4 fs-5" href="#clases" style="scroll-behavior: smooth;">Clases</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active fs-5" href="#planes" id="class-link" style="scroll-behavior: smooth;">Planes</a>
-                  </li>
-                  <li class="nav-item">
-                    <button class="nav-link active fs-5"  id="carritoIcon" onclick="mostrarCarrito()" style="scroll-behavior: smooth;padding-left: 20px;padding-top: 6px ;background: transparent;border: none;"><img src="./assets/carrito-de-compras.png" alt=""><span style="padding-left: 10px;" id="carritoCounter">0</span></button>
-                  </li>
-                </ul>
-              </div>
+
+      <nav class="navbar navbar-dark navbar-expand-lg" id="header"> 
+        <div class="container-fluid bg-transparent" >  
+          <a class="navbar-brand" href="#">Logo</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas bg-black offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-          </nav>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active me-4 fs-5" aria-current="page" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active me-4 fs-5" href="#clases" style="scroll-behavior: smooth;">Clases</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active fs-5" href="#planes" id="class-link" style="scroll-behavior: smooth;">Planes</a>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link active fs-5"  id="carritoIcon" onclick="mostrarCarrito()" style="scroll-behavior: smooth;padding-left: 20px;padding-top: 6px ;background: transparent;border: none;"><img src="./assets/carrito-de-compras.png" alt=""><span style="padding-left: 10px;" id="carritoCounter">0</span></button>
+                </li>
+              </ul>              
+            </div>
+          </div>
+        </div>
+      </nav>
 
     </div>
 
@@ -61,26 +68,13 @@
                 </div>
               </div>
 
-               <div class="card-body p-4">
-                  <div class="row d-flex justify-content-between align-items-center">
-                    <div class="col-md-2 col-lg-2 col-xl-2">
-                      <img
-                        src="./assets/gym-equipment (1).png"
-                        class="img-fluid rounded-3" alt="Cotton T-shirt">
-                    </div>
-                    <div class="col-md-3 col-lg-3 col-xl-4">
-                      <p class="lead fw-normal mb-2" id="plan-title-cart">Basic T-shirt</p>
-                      <p><span class="text-muted" id="meses-cart">Size: </span>M <span class="text-muted">Color: </span>Grey</p>
-                    </div>
-                    
-                    <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                      <h5 class="mb-0">$499</h5>
-                    </div>
-                    <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                      <a href="#!" class="text-danger"><img src="./assets/bin.png" alt=""></a>
-                    </div>
-                  </div>
-                </div>
+              
+
+              <div id="cartItemContainer">
+                
+
+              </div>
+               
               </div>    
               
       
@@ -240,7 +234,10 @@
             
             <div class="planes rookie" data-aos="fade-up" data-aos-duration="1000">
               <h5>Plan <span class="spanTitle">Rookie</span></h5>
-              <span class="precio">$15.000<span style="font-size: 18px;">/tarjeta</span></span>
+              <div class="tarjetaSpan">
+                <span class="precio">$15.000</span><span  style="font-size: 18px;">/tarjeta</span>
+              </div>
+              
 
               <div class="plan-span-container">
                 <span> <img src="./assets/check.png" alt=""> Acceso gratis a clases de 1 actividad</span>
@@ -256,7 +253,9 @@
 
             <div class="planes advanced" data-aos="fade-up" data-aos-duration="1200">
                <h5>Plan <span class="spanTitle">Advanced</span></h5>
-               <span class="precio">$20.000<span style="font-size: 18px;">/tarjeta</span></span>
+               <div class="tarjetaSpan">
+                <span class="precio">$20.000</span><span style="font-size: 18px;">/tarjeta</span>
+              </div>
 
                <div class="plan-span-container">
                 <span><img src="./assets/check-advanced.png" alt="">  Acceso gratis a clases de 2 actividades</span>
@@ -272,7 +271,10 @@
 
             <div class="planes shark" data-aos="fade-up" data-aos-duration="1400">
                 <h5>Plan <span class="spanTitle">Shark</span></h5>
-                <span class="precio">$30.000<span style="font-size: 18px;">/tarjeta</span></span>
+                <div class="tarjetaSpan">
+                  <span class="precio">$30.000</span><span style="font-size: 18px;">/tarjeta</span>
+                </div>
+                
 
                 <div class="plan-span-container">
                   <span><img src="./assets/check-shark.png" alt=""> Acceso gratis a todas las actividades</span>

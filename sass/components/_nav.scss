@@ -5,17 +5,20 @@
     
 
     .navbar{
+        background-color: transparent ; 
         width: 100%;
         height: auto;
         position: absolute;
         margin-top: 15px;
-        background-color: transparent;
+        
+
+        
 
         .container-fluid{
             max-width: 1200px;
 
 
-            .collapse{
+            .offcanvas-body{
                 .navbar-nav{
 
                     .nav-item{

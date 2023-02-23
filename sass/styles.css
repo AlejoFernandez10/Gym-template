@@ -10,25 +10,25 @@
   position: relative;
 }
 .header .navbar {
+  background-color: transparent;
   width: 100%;
   height: auto;
   position: absolute;
   margin-top: 15px;
-  background-color: transparent;
 }
 .header .navbar .container-fluid {
   max-width: 1200px;
 }
-.header .navbar .container-fluid .collapse .navbar-nav .nav-item .nav-link {
+.header .navbar .container-fluid .offcanvas-body .navbar-nav .nav-item .nav-link {
   color: #fff;
   font-weight: 600;
 }
-.header .navbar .container-fluid .collapse .navbar-nav .nav-item .nav-link:hover {
+.header .navbar .container-fluid .offcanvas-body .navbar-nav .nav-item .nav-link:hover {
   color: #1fe1ba;
   transform: scale(1.2);
   transition: 0.4s;
 }
-.header .navbar .container-fluid .collapse .navbar-nav .nav-item #class-link {
+.header .navbar .container-fluid .offcanvas-body .navbar-nav .nav-item #class-link {
   text-align: center;
   margin-top: 3px;
   background-color: #1fe1ba;
@@ -37,7 +37,7 @@
   width: 7ch;
   font-weight: 600;
 }
-.header .navbar .container-fluid .collapse .navbar-nav .nav-item #class-link:hover {
+.header .navbar .container-fluid .offcanvas-body .navbar-nav .nav-item #class-link:hover {
   width: 10ch;
   color: #fff;
   transform: scale(1);
@@ -418,8 +418,12 @@
   font-weight: bold;
   margin-bottom: 20px;
   width: 100%;
+}
+.planes-section .planes-container .planes .tarjetaSpan {
+  width: 100%;
   padding-bottom: 40px;
   border-bottom: 2px solid #555;
+  margin-bottom: 20px;
 }
 .planes-section .planes-container .planes .plan-span-container {
   display: flex;
