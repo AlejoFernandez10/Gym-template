@@ -73,6 +73,14 @@
   width: 100%;
   position: relative;
 }
+.body-container .wpp-container {
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  .body-container .wpp-container {
+    display: inline;
+  }
+}
 .body-container .wpp-container .contactanos-popUp {
   display: none;
   color: #fff;
@@ -98,13 +106,18 @@
 .body-container .cart {
   display: none;
   position: fixed;
-  width: 45%;
+  width: 100%;
   right: 1%;
   top: 15vh;
   z-index: 1000;
   box-shadow: 0px 2px 5px 0px;
   top: 15vh;
   animation: 1 aparecer 0.7s;
+}
+@media screen and (min-width: 992px) {
+  .body-container .cart {
+    width: 45%;
+  }
 }
 @keyframes desaparecer {
   0% {

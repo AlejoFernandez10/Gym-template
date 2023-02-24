@@ -62,8 +62,16 @@ const mostrarCarrito = ()=>{
     cartContainer.style.display = "inline"
 }
 
+
+//CERRAR CARRITO DESKTOP Y MOBILE
+const closeCart = document.getElementById(`closeCart`)
+
 mainContainer.addEventListener(`click`, ()=>{
     cartContainer.style.display = "none"
+})
+
+closeCart.addEventListener(`click`, ()=>{
+  cartContainer.style.display = "none"
 })
 
 //SWEET ALERT
