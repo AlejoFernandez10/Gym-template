@@ -153,3 +153,25 @@ const vaciarCarrito = ()=>{
  */
 
 
+const aplicarCodigo = document.getElementById(`aplicarCodigo`)
+const finalizarCompra = document.getElementById(`finalizarCompra`)
+
+aplicarCodigo.addEventListener(`click`,()=>{
+  Swal.fire({
+    title: 'Código aplicado',
+    text: `El código se aplicó correctamente`,
+    icon: 'success',            
+    showConfirmButton:false,
+    timer:1500,
+  })
+})
+
+finalizarCompra.addEventListener(`click`,()=>{
+  Swal.fire({
+    title: 'Disfrute su producto!',
+    text: `La compra se realizó correctamente`,
+    icon: 'success',            
+    confirmButtonText:`Continuar`,
+    
+  })
+})
